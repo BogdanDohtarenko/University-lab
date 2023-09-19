@@ -1,0 +1,31 @@
+#include <iostream> 
+#include <math.h>
+using namespace std;
+
+int main()
+{
+	double x, y, p, a, res;
+	int k;
+	cout << "Vvedite x:";
+  cin >> x;
+	cout << "Vvedite y:";
+  cin >> y;
+	while (true) {      
+	cout << "Viberite f: 1- sh(x), 2- x^2, 3- e^x "; cin >> k;
+	switch (k) {
+	case 1: k = sinh(x); break;
+	case 2: k = pow(x, 2); break;
+	case 3: k = exp(x); break;
+	default: cout << "Viberite iz treh variantov" << endl; continue;
+	}
+	break;
+	}	
+	if (x*y == 0)
+		res = sin(k) / 3;
+	else if (7 < x*y < 10)
+		res = log(fabs(y - k));
+	else res = 2 * tan(x) - y;
+	cout << "Vash resultat :" << res << endl;
+	system("pause");
+	return (0);
+}
