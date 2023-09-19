@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+int main() {
+	cout << "snachenia funkcii" << endl;
+	double  a = 0.1, b = 1,  h = (b-a)/10, y, s;
+	for (double x = a; x < b + h / 2; x += h)
+	{
+		s = 0;
+		for (int n = 0; n <= 140; n ++) {
+			double factorial = 1;
+			for (int u=1; u < 2 * n + 2; u++) {
+				factorial *= u;
+			}
+			s+= pow(-1,n)*pow(x, 2 * n) / factorial;
+			
+			//cout << " s: " << s << endl;
+		}
+		y = sin(x) / x; cout << "x = " << x << " y = " << y << endl;
+		cout << " s: " << s << endl;
+		
+	}
+	return (0);
+}   
